@@ -1,11 +1,21 @@
 import React from 'react';
-import {FirstNameContext} from '../../App';
-export default function A() {
+import { FirstNameContext, LastNameContext } from '../../App';
+export default function A(props) {
   return (
     <>
       <FirstNameContext.Consumer>
         {(fname) => {
-          return <h1> my name is {fname}</h1>;
+          return (
+            <LastNameContext.Consumer>
+              {(lname) => {
+                return (
+                  <h1>
+                    my name is {fname} {lname}
+                  </h1>
+                );
+              }}
+            </LastNameContext.Consumer>
+          );
         }}
       </FirstNameContext.Consumer>
     </>
