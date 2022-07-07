@@ -1,6 +1,6 @@
 import React from 'react';
 import { FirstNameContext, LastNameContext } from '../../App';
-export default function A(props) {
+export default function C(props) {
   return (
     <>
       <FirstNameContext.Consumer>
